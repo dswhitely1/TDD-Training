@@ -1,5 +1,5 @@
 const apiKey = process.env.REACT_APP_API_KEY;
-
+console.log(process.env);
 describe('Listing Restaurants', () => {
     it('shows restaurants from the server', () => {
         const sushiPlace = 'Sushi Place';
@@ -8,7 +8,7 @@ describe('Listing Restaurants', () => {
         cy.server({force404: true});
         cy.route({
             method: 'GET',
-            url: `https://api.outsidein.dev/${apiKey}/restaurants`,
+            url: `https://api.outsidein.dev/VSJboyBW2kfysvS32yhP1d3cGHDX8D0x/restaurants`,
             response: [
                 {id: 1, name: sushiPlace},
                 {id: 2, name: pizzaPlace}
